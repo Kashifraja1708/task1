@@ -31,7 +31,7 @@ Port	Service	Description
 445/tcp	microsoft-ds	SMB file sharing
 2701/tcp	sms-rcinfo	Microsoft SMS Remote Control Information
 
-Risk Level: 🔴 High
+Risk Level:  High
 SMB services (ports 139, 445) are frequently exploited by malware (e.g., WannaCry, EternalBlue).
 
 Host 2
@@ -45,7 +45,7 @@ Open Ports:
 Port	Service	Description
 53/tcp	domain	DNS service
 
-Risk Level: 🟡 Medium
+Risk Level:  Medium
 Likely a DNS resolver or router. Ensure DNS is not exposed externally.
 
 Host 3
@@ -61,7 +61,7 @@ Port	Service	Description
 445/tcp	microsoft-ds	SMB
 6646/tcp	unknown	Unknown service (requires investigation)
 
-Risk Level: 🔴 High
+Risk Level:  High
 Unknown port 6646 may indicate custom software or a potential backdoor.
 
 4. Risk Assessment
@@ -71,7 +71,7 @@ Unknown Service (6646)	Unknown and undocumented ports may represent vulnerable s
 DNS Exposure	Misconfigured DNS servers may allow internal data leakage.
 
 5. Recommended Actions
-🔐 For All Hosts
+For All Hosts
 
 Apply latest Windows security updates (especially SMB patches).
 
@@ -81,7 +81,7 @@ Restrict internal ports using host-based firewalls.
 
 Run authenticated vulnerability scanning (e.g., Nessus, OpenVAS).
 
-🟡 Host 2 (Port 53)
+Host 2 (Port 53)
 
 Confirm DNS access is only allowed internally.
 
@@ -89,7 +89,7 @@ Disable recursion if not required.
 
 Monitor logs for DNS tunneling activity.
 
-🔴 Host 3 (Port 6646)
+Host 3 (Port 6646)
 
 Perform service identification:
 
